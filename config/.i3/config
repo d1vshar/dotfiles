@@ -27,8 +27,8 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # Use scrot for screenshots
-bindsym $mod+Print exec --no-startup-id cd ~/Screenshots && scrot && dunstify "Screenshot Taken"
-bindsym --release $mod+Shift+s exec --no-startup-id cd ~/Screenshots && import $(date +%s).png && dunstify "Screenshot Taken"
+bindsym $mod+Print exec --no-startup-id ~/.scripts/screenshot.sh --screen
+bindsym --release $mod+Shift+s exec --no-startup-id ~/.scripts/screenshot.sh
 
 # Launch browser
 bindsym $mod+b exec --no-startup-id google-chrome-stable
