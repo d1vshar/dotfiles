@@ -1,3 +1,5 @@
+[settings]
+pseudo-transparency = true
 [bar/bottom]
 bottom = true
 fixed-center = true
