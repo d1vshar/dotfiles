@@ -1,11 +1,9 @@
 playerctl
-scrot
 dunst
 polybar
 ttf-fantasque-sans-mono
 ttf-font-awesome
 xinput
-picom-git
 nitrogen
 redshift
 light
