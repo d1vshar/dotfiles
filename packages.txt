@@ -13,3 +13,4 @@ python-dbus
 lxappearance
 lightdm-mini-greeter
 lightdm-webkit-theme-litarvan
+blueberry
