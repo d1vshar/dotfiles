@@ -14,3 +14,5 @@ lxappearance
 lightdm-mini-greeter
 lightdm-webkit-theme-litarvan
 blueberry
+pavucontrol
+xfce4-power-manager

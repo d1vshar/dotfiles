@@ -120,7 +120,7 @@ time = %l:%M %p
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
-date-alt = "%A, %d %B %Y "
+date-alt = "%a, %d %b '%y "
 time-alt = %H:%M:%S
 
 label = %date%%time% 
@@ -132,16 +132,7 @@ type = internal/network
 interface = enp7s0f1
 format-connected =    <label-connected>
 label-connected =  %upspeed%   %downspeed%
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-label-foreground = #63be8b
-format-prefix-foreground = #63be8b
-exec = python ~/.config/spotify_status.py -f '{artist} - {song}'
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/cpu]
 type = internal/cpu
 
@@ -207,16 +198,11 @@ margin = 0
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/battery]
 type = internal/battery
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 full-at = 99
 format-full = <label-full>
-label-charging = "%percentage%% Charging"
-label-full = "Fully charged"
-animation-charging-0 = ""
-animation-charging-1 = ""
-animation-charging-2 = ""
-animation-charging-3 = ""
-animation-charging-4 = ""
+label-charging = " %percentage%%"
+label-full = " 100%"
 format-discharging = " <label-discharging>"
 label-discharging = "%percentage%%"
 
@@ -265,5 +251,6 @@ click-right = ~/.scripts/player-mpris-tail.py next &
 click-middle = ~/.scripts/player-mpris-tail.py play-pause &
 format-prefix = ""
 format = <label>
+label-maxlen = 45
 label-foreground = #63be8b
 format-prefix-foreground = #63be8b
