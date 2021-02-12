@@ -167,6 +167,7 @@ label-muted = " Muted"
 ramp-volume-0 =""
 ramp-volume-1 =""
 ramp-volume-2 =""
+click-right = pavucontrol &
 format-volume-foreground = #50fa7b
 format-muted-foreground = #50fa7b
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
