@@ -17,6 +17,8 @@ fi
 
 export EDITOR=/usr/bin/nvim
 
+export PATH=$PATH:$HOME/bin
+
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
