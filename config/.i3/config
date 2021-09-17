@@ -102,7 +102,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # open specific windows in floating mode
-for_window [class="Microsoft Teams - Preview"] floating enable border pixel 2
+# for_window [class="Microsoft Teams - Preview"] floating enable border pixel 2
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
 
 # focus the child container
