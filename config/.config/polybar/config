@@ -12,8 +12,8 @@ border-size= 5
 padding-right = 2
 module-margin = 1
 font-0 = Source Code Pro:size=8;1.5
-font-1 = FontAwesome5Free:style=Solid:size=9;2
-font-2 = FontAwesome5Brands:style=Regular:size=9;2
+font-1 = Font Awesome 6 Free:style=Solid:size=9;2
+font-2 = Font Awesome 6 Brands:style=Regular:size=9;2
 
 modules-left = i3 sep windowtitle
 modules-center = player-mpris-tail

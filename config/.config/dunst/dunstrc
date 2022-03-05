@@ -1,7 +1,11 @@
 [global]
 monitor = 0
 follow = mouse
-geometry = "300x100-5-45"
+# geometry = "300x100-5-45"
+origin = bottom-right
+width = 300
+height = 100
+offset = 5x45
 notification_height = 100
 indicate_hidden = yes
 shrink = no
