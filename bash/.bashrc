@@ -153,3 +153,4 @@ eval "$(pyenv init --path)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/anshu/.sdkman"
 [[ -s "/home/anshu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/anshu/.sdkman/bin/sdkman-init.sh"
+[[ -f /home/anshu/.gnuhealthrc ]] && source /home/anshu/.gnuhealthrc

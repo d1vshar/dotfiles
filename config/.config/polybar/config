@@ -17,7 +17,7 @@ font-2 = Font Awesome 6 Brands:style=Regular:size=9;2
 
 modules-left = i3 sep windowtitle
 modules-center = player-mpris-tail
-modules-right = filesystem sep memory sep cpu sep bluetooth sep wired-network wireless-network sep pulseaudio sep battery sep date
+modules-right = cpu sep bluetooth sep wired-network wireless-network sep pulseaudio sep battery sep date
 
 separator =
 
@@ -144,18 +144,18 @@ label =  %percentage%%
 
 label-foreground = #6272a4
 label-padding-right = 0
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/memory]
-type = internal/memory
-
-; Seconds to sleep between updates
-; Default: 1
-interval = 0.5
-format = <label>
-
-label =  %gb_used%
-
-label-foreground = #bd93f9
+# ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+# [module/memory]
+# type = internal/memory
+# 
+# ; Seconds to sleep between updates
+# ; Default: 1
+# interval = 0.5
+# format = <label>
+# 
+# label =  %gb_used%
+# 
+# label-foreground = #bd93f9
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -174,9 +174,9 @@ format-muted-foreground = #50fa7b
 [module/wireless-network]
 type = internal/network
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
+label-connected = %essid%  %downspeed%
 interface = wlp0s20f3
-
+interval = 5
 label-connected-foreground = #8be9fd
 
 format-disconnected = <label-disconnected>
@@ -225,15 +225,15 @@ label-maxlen = 50
 inherit = module/decor-glyph
 content = "/"
 content-foreground = #44475a
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/filesystem]
-type = internal/fs
-mount-0 = /
-interval = 10
-fixed-values = true
-spacing = 4
-label-mounted = " %used%"
-format-mounted-foreground =  #eb984e
+# ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+# [module/filesystem]
+# type = internal/fs
+# mount-0 = /
+# interval = 10
+# fixed-values = true
+# spacing = 4
+# label-mounted = " %used%"
+# format-mounted-foreground =  #eb984e
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/bluetooth]
 type = custom/script
@@ -245,13 +245,13 @@ format-foreground = #ffffff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/.scripts/player-mpris-tail.py -f '{icon} {artist} - {title}'
+exec = ~/.scripts/player-mpris-tail.py -f '{icon} {:t12:{artist}:} - {:t24:{title}:}'
 tail = true
 click-left = ~/.scripts/player-mpris-tail.py previous &
 click-right = ~/.scripts/player-mpris-tail.py next &
 click-middle = ~/.scripts/player-mpris-tail.py play-pause &
-format-prefix = ""
+# format-prefix = ""
 format = <label>
-label-maxlen = 45
+label-maxlen = 60
 label-foreground = #63be8b
 format-prefix-foreground = #63be8b
